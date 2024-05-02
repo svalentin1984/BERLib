@@ -36,7 +36,7 @@ namespace BER
 		virtual string toString() = 0;
 		//! This abstract method provides a generic interface for the method that decodes a stream of bytes provided by a BasicBuffer into the calling BER Type
 		//! \param[in] buffer The BasicBuffer object containing the raw data to be decoded
-		//! \param[out] index The value of the index within the BasicBuffer object where the decoding process ended
+		//! \param[in,out] index The index in the buffer from where the decoding will start. After the decoding this parameter will hold the value of the new index in the buffer after the decoding has ended. 
 		//! \return The payload of the decoded value
 		virtual void *DecodeData(BasicBuffer &buffer, uint32_t &index) = 0;
 
