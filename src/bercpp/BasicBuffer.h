@@ -6,7 +6,7 @@
 
 using namespace std;
 //! \namespace BER
-//! \brief Contains general use classes
+//! \brief Contains general use classes and all the BER implementation classes for C++
 namespace BER
 {
 	//! \brief Modeling a byte linear buffer
@@ -27,7 +27,6 @@ namespace BER
 			//!
 			//! \param index The values of the position index where the new byte has to be inserted in the buffer
 			//! \param byte The actual data that has to be inserted in the buffer
-			//! \return None
 			void writeAtIndex(const uint32_t index, const uint8_t byte);
 
 		public:
@@ -45,18 +44,15 @@ namespace BER
 
 			//! \brief Add a byte at the top (beginning) of the buffer
 			//! \param byte The byte to be added
-			//! \return None
 			void PushFront(const uint8_t byte);
 
 			//! \brief Add a byte at the bottom (end) of the buffer
 			//! \param byte The byte to be added
-			//! \return None
 			void PushBack(const uint8_t byte);
 
 			//! \brief Insert a byte at a specified index position
 			//! \param index An integer specifying the position where the data should be inserted
 			//! \param byte The byte to be added
-			//! \return None
 			void Put(const uint32_t index, const uint8_t byte);
 
 			//! \brief Get the byte data stored at the specified index in the buffer. The whole buffer is not affected by this method.
@@ -78,7 +74,6 @@ namespace BER
 			//!
 			//! This method deletes the data from the buffer at the specified index. The new size of the buffer will be decremented by 1.
 			//! \param index An unsigned integer specifying the index from which the data is removed from the buffer
-			//! \return None
 			void Erase(const uint32_t index);
 
 			//! \brief Determines how many bytes are stored in the buffer.
@@ -94,7 +89,6 @@ namespace BER
 			//! \brief Clear the content of the buffer
 			//!
 			//! This method empties the buffer by deleting all its content. It does not deallocate the memory zone. After this call the call of Size() will return 0
-			//! \return None
 			void Clear(void);
 
 			//! \brief Print a buffer to a string

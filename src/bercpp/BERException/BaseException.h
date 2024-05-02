@@ -2,6 +2,7 @@
 
 #include <exception>
 
+//! Namespace containing all the BER implementation for C++
 namespace BER
 {
 //! Length of the Custom Message of the exception

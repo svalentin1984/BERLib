@@ -24,7 +24,6 @@ namespace BER
 		return Encode(this->Value);
 	}
 
-
 	template <class BaseType> BasicBuffer* BaseBERType<BaseType>::Encode(void *value)
 	{
 		return Encode((BaseType*)value);
@@ -40,7 +39,6 @@ namespace BER
 	{
 		return Size((BaseType*)value);
 	}
-
 
 	template <class BaseType> void* BaseBERType<BaseType>::DecodeData(BasicBuffer &buffer, uint32_t &index)
 	{
