@@ -19,7 +19,7 @@
 #include "BERStructure.h"
 #include "BERUnsigned.h"
 #include "BERUtils.h"
-
+#include "BERDecode.h"
 namespace BER
 {
 

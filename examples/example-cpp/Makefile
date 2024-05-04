@@ -10,7 +10,7 @@ $(TARGET):
 	$(CC) $(CFLAGS) -c main.cpp
 	$(CC) $(CFLAGS) -c ../../src/bercpp/*.cpp
 	$(CC) $(CFLAGS) -c ../../src/bercpp/BERException/*.cpp
-	$(CC) $(CFLAGS) -o $(TARGET) main.o *.o
+	$(CC) $(CFLAGS) -o $(TARGET) *.o
 
 clean:
 	$(RM) $(TARGET) *.o

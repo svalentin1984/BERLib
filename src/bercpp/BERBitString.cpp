@@ -87,7 +87,7 @@ namespace BER
 
 		ostringstream oss;
 
-		oss << "{BERArray: " << (uint32_t)Value->Size() << " ";
+		oss << "{BERBitString: " << (uint32_t)Value->Size() << " ";
 		for (uint32_t i = 0; i < Value->Size(); i++)
 		{
 			bool v = Value->Get(i);
