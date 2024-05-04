@@ -61,7 +61,7 @@ namespace BER
 		//! \param[in,out] index The index in the buffer from where the decoding will start. After the decoding this parameter will hold the value of the new index in the buffer after the decoding has ended. 
 		virtual BaseType* Decode(BasicBuffer &buffer, uint32_t &index) = 0;
 		
-		//! This abstract method provides a generic interface for the method that returns a string representation of the current BER Type
+		//! Method that returns a string representation of the current BER Type
 		//! \return The string representation of the current BER Type
 		virtual string toString() = 0;
 
