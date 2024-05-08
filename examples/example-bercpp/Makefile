@@ -1,6 +1,6 @@
 CC=g++
 
-CFLAGS=-Wall -pedantic -I ../../src/bercpp -pthread
+CFLAGS=-Wall -pedantic -I ../../src/bercpp
 
 TARGET=example-bercpp
 
