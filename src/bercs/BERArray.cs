@@ -10,7 +10,9 @@ namespace BER
     {
         #region Overrides of BaseBERType<List<IBaseBERType>>
 
+		//! This static parameter dictates the behavious of the Decode method. When this parameter is true and an exception was found the decoding process is stopped but the exception is not thrown to the calling process, thus a partial decode of the BERArray is returned. If this parameter is true, when an exception is caught the whole decoding process is terminated and the exception is thrown ahead.
         public static bool PartialDecode = false;
+
 
         protected Exception error = null;
         public Exception Exception
@@ -18,6 +20,9 @@ namespace BER
             get { return error; }
         }
 
+
+		//! Method that encodes the value of this BERArray into a Byte List containing the encoding of the BERArray as well as all the component objects
+		//! \return A Byte List containing the encoded raw bytes of this BERArray	
         public override List<byte> Encode(List<IBaseBERType> value)
         {
             var list = new List<Byte> { (byte)BERCodes.Array, (byte)value.Count };
@@ -26,6 +31,10 @@ namespace BER
             return list;
         }
 
+		//! Method that decodes a List of Bytes into this BERArray object. This method will decode all the objectes contained in the BERArray
+		//! \return true The decoding process was succesfull
+		//! \return true The decoding process was not succesfull
+		//! \throws BERTypeDecodeIncorrectTag if an incompatible tag was found
         public override List<IBaseBERType> Decode(List<byte> buffer)
         {
             var index = 0;
@@ -68,7 +77,8 @@ namespace BER
         }
 
         #endregion
-
+		//! Method that provides a String representation of this BERArray. The string representation will also contain the representations of all the BER Types contained by this BERArray
+		//! \return The string representation of this BERArray
         public override string AsString()
         {
             StringBuilder str = new StringBuilder();

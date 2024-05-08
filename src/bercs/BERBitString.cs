@@ -6,10 +6,11 @@ using BER.Exceptions;
 
 namespace BER
 {
-    public class BERBitString : BaseBERType<List<Boolean>>
+    public class BERBitString : BaseBERType<List<Boolean>>`
     {
         #region Overrides of BaseBERType<List<bool>>
-
+		//! Method that encodes the value of this BERBitString into a Byte List
+		//! \return A Byte List containing the encoded raw bytes of this BERBitString
         public override List<byte> Encode(List<bool> value)
         {
             var result = new List<Byte> { (byte)BERCodes.BitString };
@@ -17,7 +18,10 @@ namespace BER
             result.AddRange(BERUtils.EncodeFlagList(value));
             return result;
         }
-
+		//! Method that decodes a List of Bytes into this BERBitString object
+		//! \return true The decoding process was succesfull
+		//! \return true The decoding process was not succesfull
+		//! \throws BERTypeDecodeIncorrectTag if an incompatible tag was found
         public override List<bool> Decode(List<byte> buffer)
         {
             var index = 0;
@@ -50,7 +54,8 @@ namespace BER
             return BERUtils.DecodeFlagList(byteList, (ushort)length);
         }
         #endregion
-        
+   		//! Method that provides a String representation of this BERBitString
+		//! \return The string representation of this BERBitString as a list of boolean values represented as 0s and 1s      
         public override string AsString() { 
             StringBuilder result = new StringBuilder(Value.Count);
             foreach (bool b in Value)

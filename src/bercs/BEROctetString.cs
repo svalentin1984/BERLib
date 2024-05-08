@@ -8,6 +8,8 @@ namespace BER
 {
     public class BEROctetString : BaseBERType<List<Byte>>
     {
+		//! Method that encodes the value of this BEROctetString into a Byte List
+		//! \return A Byte List containing the encoded raw bytes of this BEROctetString			
         public override List<byte> Encode(List<byte> value)
         {
             var result = new List<Byte>(value.Count + 2) {(byte) BERCodes.OctetString};
@@ -24,7 +26,10 @@ namespace BER
             result.AddRange(value);
             return result;
         }
-
+		//! Method that decodes a List of Bytes into this BEROctetString object
+		//! \return true The decoding process was succesfull
+		//! \return true The decoding process was not succesfull
+		//! \throws BERTypeDecodeIncorrectTag if an incompatible tag was found
         public override List<byte> Decode(List<byte> buffer)
         {
             var index = 0;
@@ -57,7 +62,8 @@ namespace BER
            
             return resultList;
         }
-
+		//! Method that provides a String representation of this BEROctetString
+		//! \return The string representation of this BEROctetString as a list of 2 digit hexadecimal values 
         public override string AsString()
         {
             var str = new StringBuilder(Value.Count * 2);

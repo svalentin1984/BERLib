@@ -8,6 +8,8 @@ namespace BER
 {
     public class BERVisibleString : BaseBERType<List<Byte>>
     {
+		//! Method that encodes the value of this BERVisibleString into a Byte List
+		//! \return A Byte List containing the encoded raw bytes of this BERVisibleString			
         public override List<byte> Encode(List<byte> value)
         {
             var result = new List<Byte>(value.Count + 2) { (byte)BERCodes.VisibleString };
@@ -24,7 +26,10 @@ namespace BER
             result.AddRange(value);
             return result;
         }
-
+		//! Method that decodes a List of Bytes into this BERVisibleString object
+		//! \return true The decoding process was succesfull
+		//! \return true The decoding process was not succesfull
+		//! \throws BERTypeDecodeIncorrectTag if an incompatible tag was found
         public override List<byte> Decode(List<byte> buffer)
         {
             var index = 0;
@@ -59,6 +64,8 @@ namespace BER
             return resultList;
         }
 
+		//! Method that provides a String representation of this BERVisibleString
+		//! \return The string representation of this BERVisibleString as a printable string
         public override string AsString()
         {
             StringBuilder str = new StringBuilder(Value.Count);

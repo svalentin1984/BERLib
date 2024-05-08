@@ -1,6 +1,6 @@
-﻿// ReSharper disable InconsistentNaming
-namespace BER
+﻿namespace BER
 {
+	//! Contains the TAGs that define measuring units
     public enum BERUnit
     {
         Year = 1,
@@ -28,4 +28,3 @@ namespace BER
         NoUnit = 255,
     }
 }
-// ReSharper restore InconsistentNaming

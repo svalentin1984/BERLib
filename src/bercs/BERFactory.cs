@@ -4,6 +4,10 @@ namespace BER
 {
     public class BERFactory
     {
+		//! Based on the Factory Method pattern, this method creates a BER Type based on the value of BER Tag provided as argument
+		//! \param tag The value of the BER Tag which will decide the type of the new BER to be created. This value must be one of the values in BERCodes
+		//! \return The newly created BER Object
+		//! \throws NotImplementedException if the provided tag is not found in BERCodes or not implemented yet
         public static IBaseBERType Create(byte tag)
         {
             var berType = (BERCodes) tag;

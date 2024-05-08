@@ -1,6 +1,7 @@
 ﻿
 namespace BER
 {
+	//! Contains the TAG list associated to the BER Types
     public enum BERCodes : byte
     {
         NullData = 0,
