@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33516.290
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "example-berlibcs", "example-berlibcs\example-berlibcs.csproj", "{BB2ECDF3-2461-4DB9-8325-3FECB7B23CB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BERLibCS", "BERLibCS\BERLibCS.csproj", "{B18E53BC-442E-4542-A16F-E5E694DE7FD1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BB2ECDF3-2461-4DB9-8325-3FECB7B23CB5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB2ECDF3-2461-4DB9-8325-3FECB7B23CB5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB2ECDF3-2461-4DB9-8325-3FECB7B23CB5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB2ECDF3-2461-4DB9-8325-3FECB7B23CB5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B18E53BC-442E-4542-A16F-E5E694DE7FD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B18E53BC-442E-4542-A16F-E5E694DE7FD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B18E53BC-442E-4542-A16F-E5E694DE7FD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B18E53BC-442E-4542-A16F-E5E694DE7FD1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D319B742-59F1-4882-878B-619AD6062CCC}
+	EndGlobalSection
+EndGlobal

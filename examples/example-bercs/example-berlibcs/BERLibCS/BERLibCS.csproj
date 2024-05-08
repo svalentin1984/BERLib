@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\..\src\bercs\BaseBERType.cs" Link="BaseBERType.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERArray.cs" Link="BERArray.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERBitString.cs" Link="BERBitString.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERBoolean.cs" Link="BERBoolean.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERCodes.cs" Link="BERCodes.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERDateTime.cs" Link="BERDateTime.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERDoubleLongUnsigned.cs" Link="BERDoubleLongUnsigned.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BEREnum.cs" Link="BEREnum.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERFactory.cs" Link="BERFactory.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERInteger.cs" Link="BERInteger.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERLong.cs" Link="BERLong.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERLong64Unsigned.cs" Link="BERLong64Unsigned.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERLongUnsigned.cs" Link="BERLongUnsigned.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERNullData.cs" Link="BERNullData.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BEROctetString.cs" Link="BEROctetString.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERStructure.cs" Link="BERStructure.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERUnit.cs" Link="BERUnit.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERUnsigned.cs" Link="BERUnsigned.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERUtils.cs" Link="BERUtils.cs" />
+    <Compile Include="..\..\..\..\src\bercs\BERVisibleString.cs" Link="BERVisibleString.cs" />
+    <Compile Include="..\..\..\..\src\bercs\Exceptions\BERPartialDecode.cs" Link="Exceptions\BERPartialDecode.cs" />
+    <Compile Include="..\..\..\..\src\bercs\Exceptions\BERTypeDecodeIncorrectTag.cs" Link="Exceptions\BERTypeDecodeIncorrectTag.cs" />
+    <Compile Include="..\..\..\..\src\bercs\IBaseBERType.cs" Link="IBaseBERType.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Exceptions\" />
+  </ItemGroup>
+
+</Project>
