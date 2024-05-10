@@ -6,7 +6,7 @@ using BER.Exceptions;
 
 namespace BER
 {
-    public class BERBitString : BaseBERType<List<Boolean>>`
+    public class BERBitString : BaseBERType<List<Boolean>>
     {
         #region Overrides of BaseBERType<List<bool>>
 		//! Method that encodes the value of this BERBitString into a Byte List

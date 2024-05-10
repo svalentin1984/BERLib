@@ -35,7 +35,7 @@ namespace BER
         }
 		//! Decodes the flags encoded according to a BERBitString in a bitwise manner into a boolean byte list 
 		//! \param flagList The flagList in bitwise implementation to be decoded into a boolean byte list
-		//! \param count The number of flags contained encoded into the flagList
+		//! \param flagCount The number of flags contained encoded into the flagList
 		//! \return A byte list containing containing the decoded bitwise flags into a boolean list
         public static List<Boolean> DecodeFlagList(List<Byte> flagList, UInt16 flagCount)
         {
