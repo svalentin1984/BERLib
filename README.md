@@ -1,16 +1,23 @@
-# BERLib
+# BERLib: A Basic Encoding Rules Implementation
+
+This projects offers a BER (Basic Encoding Rules) implementation in three programming languages (C, C++, C#) that offers encoding and decoding of data types in order to be used in serialization and deserialization
+processes in communication protocols. The implementation is consistent with the currently active
+standards and it also offers a great degree of scalability enabling the programmer to adapt it according to
+the needs of the project. BERLib is also highly documented and significant examples are provided for all the
+programming languages used. Our work qualifies as an ideal solution for providing data encoding and decoding
+in communication protocol design especially for Wireless Sensor Networks and Internet of Things.
 
 
 
-## Getting started
+## Repository structure
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+* [src](./tree-md)
+ * [berc](./berc)
+ * [bercpp](./berpp)
+ * [bercs](./bers)
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
 
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
+- [ ] src - library source files
 - [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
 
 ```
