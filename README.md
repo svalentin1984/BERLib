@@ -15,18 +15,82 @@ in communication protocol design especially for Wireless Sensor Networks and Int
     │   ├── bercpp              # Source files for the C++ implementation
     │   └── bercs               # Source files for the C# implementation    
     ├── exmples                 # Usage examples
-    │   ├── berc                # Usage example for the C implementation
-    │   ├── bercpp              # Usage example for the C++ implementation
-    │   └── bercs               # Usage example for the C# implementation 
+    │   ├── example-berc        # Usage example for the C implementation
+    │   ├── example-bercpp      # Usage example for the C++ implementation
+    │   └── example-bercs       # Usage example for the C# implementation 
     ├── Doxyfile-berc           # Doxygen configuration file for generating the documentation for the C implementation
     ├── Doxyfile-berpp          # Doxygen configuration file for generating the documentation for the C++ implementation
     ├── Doxyfile-bercs          # Doxygen configuration file for generating the documentation for the C# implementation
-    ├── LICENSE
-    └── README.md
+    ├── LICENSE                 # License file
+    └── README.md               # Readme file
 
 ## Usage examples
 
-- [ ] [Set up project integrations](https://dev.cs.upt.ro/dsplabs-public/berlib/-/settings/integrations)
+In the examples subdirectory there is an example for each type of implementation.
+
+### Example for C implementation
+
+The usage example for the C implementation may be found in ./examples/example-berc. It demonstrates the usage of the following BER Types: 
+* BERUnsigned
+* BERLong64Unsigned
+* BEROctetString
+* BERStructure
+
+For each of these types a value is encoded into a raw byte buffer and is then deocded and printed to standard output
+
+A simple makefile is present in order to easily compile the code.
+
+
+### Example for C++ implementation
+
+The usage example for the C++ implementation may be found in ./examples/example-bercpp. It demonstrates the usage of the following BER Types: 
+* BERUnsigned
+* BERLong64Unsigned
+* BEROctetString
+* BERBitString
+* BERStructure
+* BERArray
+ 
+
+For each of these types a value is encoded into BasicBuffer object and is then deocded and printed to standard output.
+
+A simple makefile is present in order to easily compile the code.
+
+### Example for C# implementation
+
+The usage example for the C implementation may be found in ./examples/example-bercs/example-berlibcs. This subdirectory contains a Microsoft Visual Studio Solution with 2 projects:
+
+* BERLibCS - A Class Library project which includes the C# source files. The output of this project is BERLibCS.dll library
+* example-berlibcs - A Console Appliation project which contains the actual examples and uses the BERLibCS.dll library
+ 
+
+This examples demonstrates the usege of the following BER Types:
+* BERUnsigned
+* BERLong64Unsigned
+* BEROctetString
+* BERBitString
+* BERStructure
+* BERArray
+ 
+
+For each of these types a value is encoded into List < Byte >  object and is then deocded and printed to standard output.
 
 ## Generating the documentation
 
+In order to generate the Doxygen documentation, the Doxygen tools must be installed along with Graphiz in order to also obtain the class and call diagrams. A Doxygen configuration file is provided for each type of implementation
+
+* Generate the documentation for the C implementaion.
+
+```
+doxygen Doxyfile-berc
+```
+
+* Generate the documentation for the C++ implementaion.
+```
+doxygen Doxyfile-bercpp
+```
+
+* Generate the documentation for the C# implementaion.
+```
+doxygen Doxyfile-bercs
+```
